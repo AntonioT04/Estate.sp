@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang= "eng" xmlns th="http://www.thymeleaf.org" >
+    <head>
+        <title>Estate.sp</title>
+    </head>
+    <body>
+        <div>
+            <h2>List Houses</h2>
+            <hr/>
+            <table border="1">
+                <thead>
+
+                    <tr>
+                        <th>House ID</th>
+                        <th>House Seller</th>
+                        <th>House Price</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="house: ${houses}">
+                        <th th:text="${house.id}"></th>
+                        <th th:text="${house.seller}"></th>
+                        <th th:text="${house.price}"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+</html>
